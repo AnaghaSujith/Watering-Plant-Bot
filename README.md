@@ -19,7 +19,7 @@ A simple plant-watering system that uses **ROS 2 (Python)** and **Arduino** via 
 
 
 
-## Connections
+## ⚡Connections
 
 ### Soil Moisture Sensor (Analog type)
 **VCC** → 5V (Arduino)
@@ -33,7 +33,7 @@ A simple plant-watering system that uses **ROS 2 (Python)** and **Arduino** via 
 
 
 
-##  Arduino Code (`plant_bot_arduino.ino`)
+## 💻 Arduino Code (`plant_bot_arduino.ino`)
 
  Listens over serial for:
    `R` → Reads and returns soil moisture
@@ -41,21 +41,33 @@ A simple plant-watering system that uses **ROS 2 (Python)** and **Arduino** via 
 
 
 
-##  ROS 2 Python Node (`plant_bot_ros.py`)
+## 🐍 ROS 2 Python Node (`plant_bot_ros.py`)
 
  Sends `'R'` to Arduino every 5 seconds
  Reads the moisture value
  If value > 800, sends `'W'` to water the plant
 
 
+## 📁 Files in This Repository
 
-##  How to Run
+plantbot/
+├── plant_bot_ros.py # ROS 2 Node (Python)
+├── plant_bot_arduino.ino # Arduino Code
+└── README.md # Project Info
 
-### 1. Upload Arduino Sketch
-- Open `plant_bot_arduino.ino` in Arduino IDE
-- Select board and port, then upload
 
-### 2. Run ROS 2 Node
-- Make sure ROS 2 workspace is sourced:
-  ```bash
-  source /opt/ros/<your_ros_distro>/setup.bash
+## 🚀 How to run
+
+### 1. Upload Arduino Code
+- Open `plant_bot_arduino.ino` in Arduino IDE.
+- Select your board and COM port.
+- Upload the code.
+
+### 2. Connect via USB
+- Plug Arduino into PC (usually `/dev/ttyUSB0` or `COMx`).
+
+### 3. Run ROS 2 Node
+```bash
+source /opt/ros/<distro>/setup.bash
+python3 plant_bot_ros.py
+
