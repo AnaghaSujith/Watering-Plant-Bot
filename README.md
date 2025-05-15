@@ -54,6 +54,7 @@ A simple plant-watering system that uses **ROS 2 (Python)** and **Arduino** via 
 plantbot/
 ├── plant_bot_ros        # ROS 2 Node (Python)
 ├── plant_bot_Arduino    # Arduino Code
+├── video                #video of the bot
 └── README.md                # Project Info
 ```
 
