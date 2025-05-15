@@ -55,7 +55,7 @@ plantbot/
 ├── plant_bot_ros.py         # ROS 2 Node (Python)
 ├── plant_bot_arduino.ino    # Arduino Code
 └── README.md                # Project Info
-
+```
 
 
 ## 🚀 How to run
