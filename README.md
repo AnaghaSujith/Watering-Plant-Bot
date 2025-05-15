@@ -52,8 +52,8 @@ A simple plant-watering system that uses **ROS 2 (Python)** and **Arduino** via 
 
 ```text
 plantbot/
-├── plant_bot_ros.py         # ROS 2 Node (Python)
-├── plant_bot_arduino.ino    # Arduino Code
+├── plant_bot_ros        # ROS 2 Node (Python)
+├── plant_bot_Arduino    # Arduino Code
 └── README.md                # Project Info
 ```
 
@@ -61,7 +61,7 @@ plantbot/
 ## 🚀 How to run
 
 ### 1. Upload Arduino Code
-- Open `plant_bot_arduino.ino` in Arduino IDE.
+- Open `arduino_node.ino` in Arduino IDE.
 - Select your board and COM port.
 - Upload the code.
 
@@ -71,5 +71,6 @@ plantbot/
 ### 3. Run ROS 2 Node
 ```bash
 source /opt/ros/<distro>/setup.bash
-python3 plant_bot_ros.py
+ros2 run plant_bot plant_bot_node
+
 
