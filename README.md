@@ -19,14 +19,14 @@ A simple plant-watering system that uses **ROS 2 (Python)** and **Arduino UNO** 
 ## Connections
 
 ### Soil Moisture Sensor (Analog type)
-**VCC** → 5V (Arduino)
-**GND** → GND (Arduino)
-**AO**  → A0 (Arduino)
+- **VCC** → 5V (Arduino)
+- **GND** → GND (Arduino)
+- **AO**  → A0 (Arduino)
 
 ### Servo Motor
-**Signal** → Arduino digital pin 9
-**VCC** → 5V
-**GND** → GND
+- **Signal** → Arduino digital pin 9
+- **VCC** → 5V
+- **GND** → GND
 
 
 
