@@ -2,24 +2,21 @@
 
 Watering PlantBot with ROS2 and Arduino
 
-A simple plant-watering system that uses **ROS 2 (Python)** and **Arduino** via **serial communication**. The system reads soil moisture and activates a servo motor to water the plant if the soil is dry.
+A simple plant-watering system that uses **ROS 2 (Python)** and **Arduino UNO** via **serial communication**. The system reads soil moisture and activates a servo motor to water the plant if the soil is dry.
 
 ---
 
-## 🧰 Components Used
+## Components Used
 
 | Component              | Quantity |
 |------------------------|----------|
-| Arduino UNO/Nano       | 1        |
+| Arduino UNO            | 1        |
 | Soil Moisture Sensor   | 1        |
 | Servo Motor (SG90/MG90)| 1        |
 | Jumper Wires           | As needed|
-| USB Cable              | 1        |
-| Computer with ROS 2 installed | 1 |
 
 
-
-## ⚡Connections
+## Connections
 
 ### Soil Moisture Sensor (Analog type)
 **VCC** → 5V (Arduino)
@@ -27,13 +24,13 @@ A simple plant-watering system that uses **ROS 2 (Python)** and **Arduino** via 
 **AO**  → A0 (Arduino)
 
 ### Servo Motor
-**Signal** → D9 (Arduino pin 9)
-**VCC** → 5V (use external power supply if needed)
-**GND** → GND (shared with Arduino)
+**Signal** → Arduino digital pin 9
+**VCC** → 5V
+**GND** → GND
 
 
 
-## 💻 Arduino Code (`plant_bot_arduino.ino`)
+## Arduino Code (`plant_bot_arduino.ino`)
 
  Listens over serial for:
    `R` → Reads and returns soil moisture
@@ -41,25 +38,25 @@ A simple plant-watering system that uses **ROS 2 (Python)** and **Arduino** via 
 
 
 
-## 🐍 ROS 2 Python Node (`plant_bot_ros.py`)
+## ROS 2 Python Node (`plant_bot_ros.py`)
 
  Sends `'R'` to Arduino every 5 seconds
  Reads the moisture value
  If value > 800, sends `'W'` to water the plant
 
 
-## 📁 Files in This Repository
+## Files in This Repository
 
 ```text
 plantbot/
-├── plant_bot_ros        # ROS 2 Node (Python)
-├── plant_bot_Arduino    # Arduino Code
-├── video                #video of the bot
-└── README.md                # Project Info
+├── plant_bot_ros        
+├── plant_bot_Arduino    
+├── video                
+└── README.md              
 ```
 
 
-## 🚀 How to run
+## How to run
 
 ### 1. Upload Arduino Code
 - Open `arduino_node.ino` in Arduino IDE.
