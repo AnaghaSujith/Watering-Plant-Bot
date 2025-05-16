@@ -33,16 +33,16 @@ A simple plant-watering system that uses **ROS 2 (Python)** and **Arduino UNO** 
 ## Arduino Code (`plant_bot_arduino.ino`)
 
  Listens over serial for:
-   `R` → Reads and returns soil moisture
-   `W` → Activates servo to water plant
+  - `R` → Reads and returns soil moisture
+  - `W` → Activates servo to water plant
 
 
 
 ## ROS 2 Python Node (`plant_bot_ros.py`)
 
- Sends `'R'` to Arduino every 5 seconds
- Reads the moisture value
- If value > 800, sends `'W'` to water the plant
+ - Sends `'R'` to Arduino every 5 seconds
+ - Reads the moisture value
+ - If value > 800, sends `'W'` to water the plant
 
 
 ## Files in This Repository
